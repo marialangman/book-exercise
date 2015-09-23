@@ -33,4 +33,14 @@ class Book
         return title;
     }
 
+    //Print Author to terminal window
+    public void printAuthor()
+    {
+        System.out.println("Author: " + author);
+    }
+    //Print Title to terminal window
+    public void printTitle()
+    {
+        System.out.println("Title: " + title);
+    }
 }
