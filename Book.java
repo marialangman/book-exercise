@@ -28,7 +28,10 @@ class Book
     //Mutator to set refNumber
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if (ref.length()<3)
+            System.out.println("Error:  Reference number must be 3 characters minimum; cannot change Reference Number.");
+        else    
+            refNumber = ref;
     }
     // Return author
     public String getAuthor()
