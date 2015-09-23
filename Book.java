@@ -14,17 +14,24 @@ class Book
     private int pages;  //number of pages in the book
     private String refNumber;
     private int borrowed = 0;
+    private boolean courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int numPages)
+    public Book(String bookAuthor, String bookTitle, int numPages, boolean courseUse)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = numPages;
         refNumber = "";
+        courseText = courseUse;
+    }
+    //Accessor to see if book is a course textbook
+    public boolean isCourseText()
+    {
+        return courseText;
     }
     //Mutator to update how many times book is borrowed; increment by 1 each time it is called
     public void borrow()
@@ -77,10 +84,15 @@ class Book
     //Print the details - title, author, pages - of the book to terminal window
     public void printDetails()
     {
+        String status = "not a";
+        if (courseText)
+            status = "a";
         if (refNumber.length()==0)
             refNumber = "ZZZ";
         System.out.println("Title: " + title + "\nAuthor: " + author + "\nNumber of pages: " + pages + "\nReference No.: " + refNumber );
         System.out.println("Number of times borrowed: " + borrowed);
+        System.out.println("This book is: " + status + " course textbook.");
+        
     }
 
 }
