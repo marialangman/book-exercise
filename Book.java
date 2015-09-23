@@ -63,7 +63,9 @@ class Book
     //Print the details - title, author, pages - of the book to terminal window
     public void printDetails()
     {
-        System.out.println("Title: " + title + "\nAuthor: " + author + "\nNumber of pages: " + pages);
+        if (refNumber.length()==0)
+            refNumber = "ZZZ";
+        System.out.println("Title: " + title + "\nAuthor: " + author + "\nNumber of pages: " + pages + "\nReference No.: " + refNumber );
     }
 
 }
