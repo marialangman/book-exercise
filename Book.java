@@ -49,4 +49,10 @@ class Book
     {
         System.out.println("Title: " + title);
     }
+    //Print the details - title, author, pages - of the book to terminal window
+    public void printDetails()
+    {
+        System.out.println("Title: " + title + "\nAuthor: " + author + "\nNumber of pages: " + pages);
+    }
+   
 }
